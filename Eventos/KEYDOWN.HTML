@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>keydown</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("input").keydown(function(){
+        $("input").css("background-color", "yellow");
+    });
+    $("input").keyup(function(){
+        $("input").css("background-color", "blue");
+    });
+});
+</script>
+</head>
+<body>
+Escribe tu Nombre: <input type="text">
+
+<p>
+Introduzca su nombre en el campo de entrada anterior. Cambiará el color de fondo en keydown y keyup.</p>
+
+</body>
+</html>
