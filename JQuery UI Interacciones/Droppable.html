@@ -1,0 +1,39 @@
+ <!doctype html>
+<html lang="en">
+<head>
+  
+  <title>jQuery UI Droppable</title>
+  
+  <style>
+  #draggable { width: 100px; height: 100px; padding: 0.5em; float: left; margin: 10px 10px 10px 0; border: solid;  }
+  #droppable { width: 150px; height: 150px; padding: 0.5em; float: left; margin: 10px; border: solid; color: red;}
+  </style>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#draggable" ).draggable();
+    $( "#droppable" ).droppable({
+      drop: function( event, ui ) {
+        $( this )
+          .addClass( "ui-state-highlight" )
+          .find( "p" )
+            .html( "movido!" );
+      }
+    });
+  } );
+  </script>
+</head>
+<body>
+ 
+<div id="draggable" class="ui-widget-content" >
+  <p>ponme aqui!!!</p>
+</div>
+ 
+<div id="droppable" class="ui-widget-header">
+  <p>mueveme!!!</p>
+</div>
+ 
+ 
+</body>
+</html>
